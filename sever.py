@@ -1,13 +1,14 @@
 from flask import Flask, request, jsonify,render_template
 import google.generativeai as genai
 from flask_cors import CORS
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Fix CORS issue to allow frontend requests
 
 # Configure Gemini API Key
-genai.configure(api_key="AIzaSyBMzte9ljBmVse8bk13KPnjNw71I44j-Rw")
+genai.configure(api_key=os.environ.get('GEM_API'))
 
 def gemini_ai(prompt):
     try:
