@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify,render_template
 import google.generativeai as genai
 from flask_cors import CORS
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
