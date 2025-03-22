@@ -19,7 +19,7 @@ def gemini_ai(prompt):
         return f"Error: {e}"
     
 @app.route("/")
-def home():
+def index():
     return render_template("index.html")
 
 @app.route("/ask", methods=["POST"])
