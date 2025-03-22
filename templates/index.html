@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Your Smart AI Chatbot - Powered by Gemini ✨</h1>
+        <div class="chat-box">
+            <textarea id="userInput" placeholder="Type your question here..."></textarea>
+            <button onclick="sendRequest()">Ask AI</button>
+        </div>
+        <div id="responseArea">
+            <h2>📝 Your Question:</h2>
+            <p id="userQuestion"></p>
+            <h2>💡 AI's Response:</h2>
+            <p id="aiResponse"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
